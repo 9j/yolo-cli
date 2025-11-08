@@ -26,20 +26,25 @@ YOLO CLI is a terminal-based application that enables seamless interaction with 
 ## Installation
 
 ```bash
-npm install -g yolo-cli
+npm install -g @0vv/yolo-cli
 ```
 
 Or use npx without installation:
 
 ```bash
-npx yolo-cli
+npx @0vv/yolo-cli
 ```
 
 ## Quick Start
 
 1. Launch YOLO CLI:
    ```bash
-   yolo
+   yolo-cli
+   ```
+
+   Or if installed via npx:
+   ```bash
+   npx @0vv/yolo-cli
    ```
 
 2. Enter your OpenRouter API key when prompted
@@ -53,7 +58,7 @@ npx yolo-cli
 ### Interactive Mode
 
 ```bash
-yolo
+yolo-cli
 ```
 
 Type your query and press Enter. The AI response streams in real-time.
@@ -65,19 +70,19 @@ Press **Shift+Tab** to cycle through your enabled models. The current model appe
 ### One-Off Query
 
 ```bash
-yolo -q "What is TypeScript?"
+yolo-cli -q "What is TypeScript?"
 ```
 
 ### Specify Model
 
 ```bash
-yolo -m anthropic/claude-3-opus -q "Explain quantum computing"
+yolo-cli -m anthropic/claude-3-opus -q "Explain quantum computing"
 ```
 
 ### Continue Previous Session
 
 ```bash
-yolo --continue
+yolo-cli --continue
 ```
 
 ## Keyboard Shortcuts
