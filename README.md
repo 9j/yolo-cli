@@ -39,10 +39,10 @@ npx @0vv/yolo-cli
 
 1. Launch YOLO CLI:
    ```bash
-   yolo-cli
+   yolo
    ```
 
-   Or if installed via npx:
+   Or if using npx:
    ```bash
    npx @0vv/yolo-cli
    ```
@@ -58,7 +58,7 @@ npx @0vv/yolo-cli
 ### Interactive Mode
 
 ```bash
-yolo-cli
+yolo
 ```
 
 Type your query and press Enter. The AI response streams in real-time.
@@ -70,19 +70,19 @@ Press **Shift+Tab** to cycle through your enabled models. The current model appe
 ### One-Off Query
 
 ```bash
-yolo-cli -q "What is TypeScript?"
+yolo -q "What is TypeScript?"
 ```
 
 ### Specify Model
 
 ```bash
-yolo-cli -m anthropic/claude-3-opus -q "Explain quantum computing"
+yolo -m anthropic/claude-3-opus -q "Explain quantum computing"
 ```
 
 ### Continue Previous Session
 
 ```bash
-yolo-cli --continue
+yolo --continue
 ```
 
 ## Keyboard Shortcuts

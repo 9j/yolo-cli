@@ -4,7 +4,9 @@
 	"description": "Interactive AI command-line interface powered by OpenRouter",
 	"license": "MIT",
 	"author": "BAK Chanhee <bak@chanhee.kr>",
-	"bin": "dist/index.js",
+	"bin": {
+		"yolo": "dist/index.js"
+	},
 	"type": "module",
 	"engines": {
 		"node": ">=18.0.0"
