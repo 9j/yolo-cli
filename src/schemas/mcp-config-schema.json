@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://yolo-cli.com/schemas/mcp-config.json",
+  "title": "YOLO CLI MCP Configuration",
+  "description": "Configuration schema for Model Context Protocol servers in YOLO CLI",
+  "type": "object",
+  "properties": {
+    "mcpServers": {
+      "type": "object",
+      "description": "Map of server names to server configurations",
+      "patternProperties": {
+        "^[a-zA-Z0-9_-]+$": {
+          "type": "object",
+          "description": "MCP server configuration",
+          "properties": {
+            "command": {
+              "type": "string",
+              "description": "Command to spawn the MCP server process (required for stdio transport)",
+              "minLength": 1
+            },
+            "args": {
+              "type": "array",
+              "description": "Command-line arguments passed to the server",
+              "items": {
+                "type": "string"
+              }
+            },
+            "env": {
+              "type": "object",
+              "description": "Environment variables for the server process (all values must be strings)",
+              "patternProperties": {
+                "^[A-Z_][A-Z0-9_]*$": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "timeout": {
+              "type": "number",
+              "description": "Timeout in milliseconds for server responses",
+              "minimum": 1000,
+              "default": 60000
+            },
+            "url": {
+              "type": "string",
+              "description": "URL for remote MCP servers (alternative to stdio)",
+              "format": "uri"
+            },
+            "headers": {
+              "type": "object",
+              "description": "HTTP headers for remote servers",
+              "patternProperties": {
+                "^[a-zA-Z-]+$": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "anyOf": [
+            {
+              "required": ["command"]
+            },
+            {
+              "required": ["url"]
+            }
+          ],
+          "not": {
+            "required": ["command", "url"]
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["mcpServers"],
+  "additionalProperties": false,
+  "examples": [
+    {
+      "mcpServers": {
+        "github": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-github"],
+          "env": {
+            "GITHUB_TOKEN": "ghp_xxxxxxxxxxxx"
+          }
+        },
+        "filesystem": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/username/projects"]
+        },
+        "remote-server": {
+          "url": "https://mcp-server.example.com/mcp",
+          "headers": {
+            "Authorization": "Bearer token123"
+          }
+        }
+      }
+    }
+  ]
+}
