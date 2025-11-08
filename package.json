@@ -1,6 +1,6 @@
 {
 	"name": "@0vv/yolo-cli",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Interactive AI command-line interface powered by OpenRouter",
 	"license": "MIT",
 	"author": "BAK Chanhee <bak@chanhee.kr>",
@@ -19,6 +19,9 @@
 		"claude",
 		"gpt",
 		"gemini",
+		"kimi",
+		"minimax",
+		"glm",
 		"terminal",
 		"mcp",
 		"model-context-protocol"
