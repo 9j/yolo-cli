@@ -1,6 +1,6 @@
 {
 	"name": "@0vv/yolo-cli",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Interactive AI command-line interface powered by OpenRouter",
 	"license": "MIT",
 	"author": "BAK Chanhee <bak@chanhee.kr>",
@@ -45,6 +45,9 @@
 		"dist"
 	],
 	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.21.1",
+		"ajv": "^8.17.1",
+		"chalk": "^5.2.0",
 		"commander": "^11.0.0",
 		"ink": "^4.1.0",
 		"ink-spinner": "^5.0.0",
@@ -52,13 +55,11 @@
 		"react": "^18.2.0"
 	},
 	"devDependencies": {
-		"@modelcontextprotocol/sdk": "^1.21.1",
 		"@sindresorhus/tsconfig": "^3.0.1",
 		"@types/react": "^18.0.32",
 		"@vdemedes/prettier-config": "^2.0.1",
 		"@vitest/coverage-v8": "^1.6.1",
 		"@vitest/ui": "^1.0.0",
-		"chalk": "^5.2.0",
 		"eslint-config-xo-react": "^0.27.0",
 		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
