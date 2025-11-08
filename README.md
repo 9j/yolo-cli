@@ -6,7 +6,7 @@ YOLO CLI is a terminal-based application that enables seamless interaction with 
 
 ## Features
 
-- 🤖 **Multiple AI Models**: Access to Claude, GPT-4, Gemini, and more through OpenRouter
+- 🤖 **Multiple AI Models**: Access to Kimi K2, MiniMax M2, GLM-4.6, and more through OpenRouter
 - ⌨️ **Model Switching**: Cycle through models with Shift+Tab
 - 💬 **Interactive Chat**: Real-time streaming responses
 - 📝 **Multi-line Input**: Support for complex queries

@@ -1,6 +1,6 @@
 {
 	"name": "@0vv/yolo-cli",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Interactive AI command-line interface powered by OpenRouter",
 	"license": "MIT",
 	"author": "BAK Chanhee <bak@chanhee.kr>",
@@ -47,6 +47,7 @@
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "^1.21.1",
 		"ajv": "^8.17.1",
+		"ajv-formats": "^3.0.1",
 		"chalk": "^5.2.0",
 		"commander": "^11.0.0",
 		"ink": "^4.1.0",
