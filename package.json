@@ -1,12 +1,34 @@
 {
-	"name": "yolo-cli",
-	"version": "1.0.0",
+	"name": "@0vv/yolo-cli",
+	"version": "0.0.1",
+	"description": "Interactive AI command-line interface powered by OpenRouter",
 	"license": "MIT",
+	"author": "BAK Chanhee <bak@chanhee.kr>",
 	"bin": "dist/index.js",
 	"type": "module",
 	"engines": {
 		"node": ">=18.0.0"
 	},
+	"keywords": [
+		"ai",
+		"cli",
+		"chat",
+		"openrouter",
+		"claude",
+		"gpt",
+		"gemini",
+		"terminal",
+		"mcp",
+		"model-context-protocol"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/9j/yolo-cli.git"
+	},
+	"bugs": {
+		"url": "https://github.com/9j/yolo-cli/issues"
+	},
+	"homepage": "https://github.com/9j/yolo-cli#readme",
 	"scripts": {
 		"build": "tsc",
 		"dev": "tsc --watch",
